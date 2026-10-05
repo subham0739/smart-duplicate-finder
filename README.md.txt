@@ -179,7 +179,61 @@ make clean
 ```
 
 ---
-
+ARCHITECHTURE
+                    ┌──────────────────────┐
+                    │        USER          │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │   Folder Selection   │
+                    │      / Input         │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │     File Scanner     │
+                    │                      │
+                    │ • Find files         │
+                    │ • Read file details  │
+                    │ • Get file size      │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │ Duplicate Detection  │
+                    │       Engine         │
+                    │                      │
+                    │ • Compare files      │
+                    │ • Generate/compare   │
+                    │   file fingerprints  │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │  Duplicate Grouping  │
+                    │                      │
+                    │ • Group duplicates   │
+                    │ • Separate unique    │
+                    │   files              │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │    Results / UI      │
+                    │                      │
+                    │ • Duplicate files    │
+                    │ • File information   │
+                    │ • Results summary    │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │   User Decision      │
+                    │                      │
+                    │ Review / Manage      │
+                    │ duplicate files      │
+                    └──────────────────────┘
 ## 11. Example Usage
 
 ```text
